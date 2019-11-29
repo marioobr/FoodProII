@@ -1,5 +1,6 @@
 package com.uca.foodpro
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
@@ -10,6 +11,8 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MapStyleOptions
 import com.google.android.gms.maps.model.MarkerOptions
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_maps.*
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -22,6 +25,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
+        imgreturnhome.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     /**
@@ -39,8 +47,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap?.mapType = GoogleMap.MAP_TYPE_NORMAL
 
         // Add a marker in Sydney and move the camera
-        val uca = LatLng(12.1249888, -86.27409)
-        mMap.addMarker(MarkerOptions().position(uca).title("Marker in UCA"))
+        val uca = LatLng(12.125210, -86.272097)
+        mMap.addMarker(MarkerOptions().position(uca).title("Universidad Centroamericana"))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(uca))
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(uca,15f))
 

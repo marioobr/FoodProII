@@ -12,7 +12,7 @@
     ]]>
 
     <EditText
-        android:id="@+id/txtUser"
+        android:id="@+id/txtNombreProd2"
         android:layout_width="300dp"
         android:layout_height="43dp"
         android:background="@drawable/input_field"
@@ -42,11 +42,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtUser"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreProd2"
         app:layout_constraintVertical_bias="0.042" />
 
     <Button
-        android:id="@+id/btnLog"
+        android:id="@+id/btnUpdate"
         android:layout_width="162dp"
         android:layout_height="53dp"
         android:background="@drawable/button"
