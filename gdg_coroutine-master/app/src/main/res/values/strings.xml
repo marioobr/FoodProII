@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FoodPro</string>
+    <string name="internet_failure_error">Internet connectivity error</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCv3Ls4LceLQL_k6cBK49mohZZhfGZ4vx8</string>
+</resources>
